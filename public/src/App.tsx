@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { QuestionCard } from "./questionCard/questionCard";
+import { QuestionCard } from './questionCard/QuestionCard'
 import { NextUIProvider } from "@nextui-org/react";
-import man1 from "./images/man1.jpg"
+import man1 from "./images/man1.jpg";
 import man2 from "./images/man2.jpg";
-import woman1 from "./images/woman1.jpg";
+import woman1 from "./images/woman1.avif";
 import {useRef} from 'react';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
   const nextQuestion = (moveFromIndex: number) => {
     if(moveFromIndex< (questions.length - 1)){
       const ref = questionCardRef.current[moveFromIndex + 1];
-      ref.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
+      ref.current?.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
       //TODO: find a way to write this more expressively
       setQuestionOpen(questionOpen.map((q,indx)=>indx==moveFromIndex+1))
     }
