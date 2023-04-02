@@ -1,18 +1,18 @@
 {
-  "files": {
-    "main.css": "/Elements/static/css/main.964fdded.css",
-    "main.js": "/Elements/static/js/main.fbdf3e1f.js",
-    "static/js/787.09f0ed32.chunk.js": "/Elements/static/js/787.09f0ed32.chunk.js",
-    "static/media/man1.jpg": "/Elements/static/media/man1.c62108a2e50cb827c337.jpg",
-    "static/media/man2.jpg": "/Elements/static/media/man2.a4076c73c90ec2bb1a56.jpg",
-    "static/media/woman1.avif": "/Elements/static/media/woman1.2c31fb8a201c18d3700a.avif",
-    "index.html": "/Elements/index.html",
-    "main.964fdded.css.map": "/Elements/static/css/main.964fdded.css.map",
-    "main.fbdf3e1f.js.map": "/Elements/static/js/main.fbdf3e1f.js.map",
-    "787.09f0ed32.chunk.js.map": "/Elements/static/js/787.09f0ed32.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.964fdded.css",
-    "static/js/main.fbdf3e1f.js"
-  ]
+  "main.css": "/Elements/static/css/main.1a364434.chunk.css",
+  "main.js": "/Elements/static/js/main.05bb3f79.chunk.js",
+  "main.js.map": "/Elements/static/js/main.05bb3f79.chunk.js.map",
+  "static/js/1.bfa17f51.chunk.js": "/Elements/static/js/1.bfa17f51.chunk.js",
+  "static/js/1.bfa17f51.chunk.js.map": "/Elements/static/js/1.bfa17f51.chunk.js.map",
+  "static/js/2.91173f74.chunk.js": "/Elements/static/js/2.91173f74.chunk.js",
+  "static/js/2.91173f74.chunk.js.map": "/Elements/static/js/2.91173f74.chunk.js.map",
+  "runtime~main.js": "/Elements/static/js/runtime~main.6467a5d2.js",
+  "runtime~main.js.map": "/Elements/static/js/runtime~main.6467a5d2.js.map",
+  "static/media/man1.jpg": "/Elements/static/media/man1.d1848d75.jpg",
+  "static/media/man2.jpg": "/Elements/static/media/man2.e4671bc5.jpg",
+  "static/media/woman1.jpg": "/Elements/static/media/woman1.2508a3a7.jpg",
+  "static/css/main.1a364434.chunk.css.map": "/Elements/static/css/main.1a364434.chunk.css.map",
+  "index.html": "/Elements/index.html",
+  "precache-manifest.b18a0590f34746edf9138d9e4d14fdbf.js": "/Elements/precache-manifest.b18a0590f34746edf9138d9e4d14fdbf.js",
+  "service-worker.js": "/Elements/service-worker.js"
 }
