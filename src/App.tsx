@@ -21,7 +21,7 @@ function App() {
   const nextQuestion = (moveFromIndex: number) => {
     if(moveFromIndex< (questions.length - 1)){
       const ref = questionCardRef.current[moveFromIndex + 1];
-      ref.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
+      ref.current.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
       //TODO: find a way to write this more expressively
       setQuestionOpen(questionOpen.map((q,indx)=>indx==moveFromIndex+1))
     }
