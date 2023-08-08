@@ -6,20 +6,20 @@ import man1 from "./images/man1.jpg"
 import man2 from "./images/man2.jpg";
 import woman1 from "./images/woman1.jpg";
 import {useRef} from 'react';
-
+import questions, { Question } from "./questions/questions" 
 function App() {
 
-  const questions = [0, 1, 2, 3];
-  const [questionOpen, setQuestionOpen] = useState(questions.map((q,indx)=> indx==0))
+  const questionsArray = [0, 1, 2, 3,4];
+  const [questionOpen, setQuestionOpen] = useState(questionsArray.map((q,indx)=> indx==0))
   const questionCardRef: any = useRef([]);
 
-  questionCardRef.current = questions.map(
+  questionCardRef.current = questionsArray.map(
     (ref, index) =>   questionCardRef.current[index] = React.createRef()
   )
    
   
   const nextQuestion = (moveFromIndex: number) => {
-    if(moveFromIndex< (questions.length - 1)){
+    if(moveFromIndex< (questionsArray.length - 1)){
       const ref = questionCardRef.current[moveFromIndex + 1];
       ref.current.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
       //TODO: find a way to write this more expressively
@@ -30,8 +30,25 @@ function App() {
   return (
     <NextUIProvider>
       <div className="App">
-        
-        {questions.map((option, index) => {
+        {questions.map((question: Question, index: number)=>{
+          return (
+          <>
+              <div onClick={()=>setQuestionOpen(questionOpen.map((question,indx)=>indx==index))} style={{ marginBottom: "40px" }} ref={questionCardRef.current[index]}>
+              <QuestionCard
+                questionLabel={question.prompt}
+                questionOptions={question.options}
+                questionAssets={question.assets}
+                index={index}
+                nextQuestion={nextQuestion}
+                isOpen={questionOpen[index]}
+               
+              />
+            
+            </div>
+          </>)
+        })
+        }
+        {/* {questionsArray.map((option, index) => {
           const questionRef = questionCardRef[index]
           return (
             <div onClick={()=>setQuestionOpen(questionOpen.map((q,indx)=>indx==index))} style={{ marginBottom: "40px" }} ref={questionCardRef.current[index]}>
@@ -50,7 +67,7 @@ function App() {
             </div>
           );
         })}
-     
+      */}
 
       </div>
     </NextUIProvider>
