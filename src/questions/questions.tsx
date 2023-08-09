@@ -35,10 +35,10 @@ const questions: Question[] = [
     prompt: "How would you describe this person’s emotional state?",
     type: QuestionType.Image,
     assets: [
-      { type: AssetType.Image, source: anxious },
-      { type: AssetType.Image, source: scared },
-      { type: AssetType.Image, source: terrified },
-      { type: AssetType.Image, source: worried },
+      { type: AssetType.Image, path: "/Q1/1.jpg" },
+      { type: AssetType.Image, path: "/Q1/2.jpg"},
+      { type: AssetType.Image, path: "/Q1/3.jpg"},
+      { type: AssetType.Image, path: "/Q1/4.jpg" },
     ],
     options: {
       optionA: "worried",
@@ -52,10 +52,10 @@ const questions: Question[] = [
     prompt: "How would you describe this person’s emotional state?",
     type: QuestionType.Image,
     assets: [
-      { type: AssetType.Image, source: Q2_OPTION_ONE },
-      { type: AssetType.Image, source: Q2_OPTION_TWO },
-      { type: AssetType.Image, source: Q2_OPTION_THREE },
-      { type: AssetType.Image, source: Q2_OPTION_FOUR },
+        { type: AssetType.Image, path: "/Q2/1.jpg" },
+        { type: AssetType.Image, path: "/Q2/2.jpg"},
+        { type: AssetType.Image, path: "/Q2/3.jpg"},
+        { type: AssetType.Image, path: "/Q2/4.jpg" },
     ],
     options: {
       optionA: "confused",
@@ -70,10 +70,10 @@ const questions: Question[] = [
       "Imagine these painting are about the painter’s relationship to the world. What do you think the artist is telling the viewer about the people?",
     type: QuestionType.Image,
     assets: [
-      { type: AssetType.Image, source: Q3_OPTION_ONE },
-      { type: AssetType.Image, source: Q3_OPTION_TWO },
-      { type: AssetType.Image, source: Q3_OPTION_THREE },
-      { type: AssetType.Image, source: Q3_OPTION_FOUR },
+        { type: AssetType.Image, path: "/Q3/1.jpg" },
+        { type: AssetType.Image, path: "/Q3/2.jpg"},
+        { type: AssetType.Image, path: "/Q3/3.jpg"},
+        { type: AssetType.Image, path: "/Q3/4.jpg" },
     ],
     options: {
       optionA: "He likes people and the world.",
@@ -88,10 +88,10 @@ const questions: Question[] = [
       "Imagine these are self-portraits. What do you think the artists are telling the viewer about themselves?",
     type: QuestionType.Image,
     assets: [
-      { type: AssetType.Image, source: Q4_OPTION_ONE },
-      { type: AssetType.Image, source: Q4_OPTION_TWO },
-      { type: AssetType.Image, source: Q4_OPTION_THREE },
-      { type: AssetType.Image, source: Q4_OPTION_FOUR },
+        { type: AssetType.Image, path: "/Q4/1.jpg" },
+        { type: AssetType.Image, path: "/Q4/2.jpg"},
+        { type: AssetType.Image, path: "/Q4/3.jpg"},
+        { type: AssetType.Image, path: "/Q4/4.jpg" },
     ],
 
     options: {
@@ -107,10 +107,10 @@ const questions: Question[] = [
       "What do you think the photographer is telling the viewer about the people? ",
       type: QuestionType.Image,
       assets: [
-        { type: AssetType.Image, source: Q5_OPTION_ONE },
-        { type: AssetType.Image, source: Q5_OPTION_TWO },
-        { type: AssetType.Image, source: Q5_OPTION_THREE },
-        { type: AssetType.Image, source: Q5_OPTION_FOUR },
+        { type: AssetType.Image, path: "/Q5/1.jpg" },
+        { type: AssetType.Image, path: "/Q5/2.jpg"},
+        { type: AssetType.Image, path: "/Q5/3.jpg"},
+        { type: AssetType.Image, path: "/Q5/4.jpg" },
       ],
 
     options: {
@@ -161,12 +161,12 @@ const questions: Question[] = [
     //Question 8
     prompt:
       "How do these videos make you feel?",
-    type: QuestionType.Sound,
+    type: QuestionType.Video,
     assets: [
-      { type: AssetType.Sound, path: "/Q8/1.mp4" },
-      { type: AssetType.Sound, path: "/Q8/2.mp4" },
-      { type: AssetType.Sound, path: "/Q8/3.mp4" },
-      { type: AssetType.Sound, path: "/Q8/4.mp4" },
+      { type: AssetType.Video, path: "/Q8/1.mp4" },
+      { type: AssetType.Video, path: "/Q8/2.mp4" },
+      { type: AssetType.Video, path: "/Q8/3.mp4" },
+      { type: AssetType.Video, path: "/Q8/4.mp4" },
     ],
 
     options: {
@@ -180,12 +180,12 @@ const questions: Question[] = [
     //Question 9
     prompt:
       "How do these videos make you feel?",
-    type: QuestionType.Sound,
+    type: QuestionType.Video,
     assets: [
-        { type: AssetType.Sound, path: "/Q9/1.mp4" },
-        { type: AssetType.Sound, path: "/Q9/2.mp4" },
-        { type: AssetType.Sound, path: "/Q9/3.mp4" },
-        { type: AssetType.Sound, path: "/Q9/4.mp4" },
+        { type: AssetType.Video, path: "/Q9/1.mp4" },
+        { type: AssetType.Video, path: "/Q9/2.mp4" },
+        { type: AssetType.Video, path: "/Q9/3.mp4" },
+        { type: AssetType.Video, path: "/Q9/4.mp4" },
     ],
 
     options: {
@@ -198,41 +198,3 @@ const questions: Question[] = [
 
 ];
 export default questions;
-
-//Question1
-import anxious from "../images/Q1/anxious.jpg";
-import scared from "../images/Q1/scared.jpg";
-import terrified from "../images/Q1/terrified.jpg";
-import worried from "../images/Q1/worried.jpg";
-
-//Question2
-import Q2_OPTION_ONE from "../images/Q2/irritated.png";
-import Q2_OPTION_TWO from "../images/Q2/confused.jpg";
-import Q2_OPTION_THREE from "../images/Q2/lost.jpg";
-import Q2_OPTION_FOUR from "../images/Q2/perplexed.jpg";
-
-//Question3
-import Q3_OPTION_ONE from "../images/Q3/1.jpg";
-import Q3_OPTION_TWO from "../images/Q3/2.jpg";
-import Q3_OPTION_THREE from "../images/Q3/3.jpg";
-import Q3_OPTION_FOUR from "../images/Q3/4.jpg";
-
-//Question4
-import Q4_OPTION_ONE from "../images/Q4/1.jpg";
-import Q4_OPTION_TWO from "../images/Q4/2.jpg";
-import Q4_OPTION_THREE from "../images/Q4/3.jpg";
-import Q4_OPTION_FOUR from "../images/Q4/4.jpg";
-
-//Question5
-import Q5_OPTION_ONE from "../images/Q5/1.jpg";
-import Q5_OPTION_TWO from "../images/Q5/2.jpg";
-import Q5_OPTION_THREE from "../images/Q5/3.jpg";
-import Q5_OPTION_FOUR from "../images/Q5/4.jpg";
-
-
-
-// //Question6
-// import Q6_OPTION_ONE from "/Q6/1.mp3";
-// // import Q6_OPTION_TWO from "../images/Q6/2.mp4";
-// // import Q6_OPTION_THREE from "../images/Q6/3.mp4";
-// // import Q6_OPTION_FOUR from "../images/Q6/4.mp4";

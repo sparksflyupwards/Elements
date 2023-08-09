@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player'
 interface IQuestionCardProps {
   questionLabel: string;
   questionOptions: QuestionOptions;
-  questionAssets: Asset[];
+  questionAssets?: Asset[];
   index: number;
   isOpen: boolean;
   nextQuestion: (moveFromIndex: number) => void;
@@ -42,7 +42,7 @@ export const QuestionCard = (props: IQuestionCardProps) => {
                                 return(<Image
                                     width={320}
                                     height={180}
-                                    src={asset.source}
+                                    src={asset.source ? asset.source : asset.path}
                                     alt="Default Image"
                                     objectFit="cover"
                                   />)
@@ -58,7 +58,7 @@ export const QuestionCard = (props: IQuestionCardProps) => {
                                 return(<></>)
 
                             case AssetType.Video:
-                                return(<ReactPlayer url={asset.path? asset.path : ""} />)
+                                return(<ReactPlayer url={asset.path? asset.path : ""} controls={true} />)
                         }
                       
                     return Asset;
