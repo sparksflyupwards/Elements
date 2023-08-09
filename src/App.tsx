@@ -9,7 +9,7 @@ import {useRef} from 'react';
 import questions, { Question } from "./questions/questions" 
 function App() {
 
-  const questionsArray = [0, 1, 2, 3,4];
+  const questionsArray = [0, 1, 2, 3,4,5,6];
   const [questionOpen, setQuestionOpen] = useState(questionsArray.map((q,indx)=> indx==0))
   const questionCardRef: any = useRef([]);
 

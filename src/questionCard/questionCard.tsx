@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Card, Radio, Text, Image, Collapse } from "@nextui-org/react";
 import { Asset, AssetType, Question, QuestionOptions } from "../questions/questions";
 import ReactAudioPlayer from 'react-audio-player';
+import ReactPlayer from 'react-player'
 
 interface IQuestionCardProps {
   questionLabel: string;
@@ -53,6 +54,11 @@ export const QuestionCard = (props: IQuestionCardProps) => {
                                     autoPlay={false}
                                     controls={true}
                                     />)
+                            case AssetType.Text:
+                                return(<></>)
+
+                            case AssetType.Video:
+                                return(<ReactPlayer url={asset.path? asset.path : ""} />)
                         }
                       
                     return Asset;
