@@ -9,6 +9,7 @@ import {
 import ReactAudioPlayer from "react-audio-player";
 import ReactPlayer from "react-player";
 
+
 interface IQuestionCardProps {
   questionLabel: string;
   questionOptions: QuestionOptions;
@@ -16,13 +17,16 @@ interface IQuestionCardProps {
   index: number;
   isOpen: boolean;
   nextQuestion: (moveFromIndex: number) => void;
+  setAnswer: (question: number, answer: string) => void;
 }
 
 const answerValues = ["a", "b", "c", "d"];
 
 export const QuestionCard = (props: IQuestionCardProps) => {
-  console.log(props);
-  const handleNextQuestion = () => {
+
+  const handleNextQuestion = (value: string) => {
+    console.log("attemptint to handle question", value)
+    props.setAnswer(props.index, value)
     props.nextQuestion(props.index);
   };
   return (
@@ -76,39 +80,43 @@ export const QuestionCard = (props: IQuestionCardProps) => {
                 <Radio.Group
                   orientation="horizontal"
                   defaultValue="primary"
-                  onChange={() => handleNextQuestion()}
+                  onChange={handleNextQuestion}
                 >
                   <Radio
-                    value={props.questionOptions.optionA}
+      
                     color="primary"
                     style={{ margin: "auto" }}
                     size="xs"
+                    value="a"
                   >
                     {props.questionOptions.optionA}
                   </Radio>
 
                   <Radio
-                    value={props.questionOptions.optionB}
+
                     color="primary"
                     style={{ margin: "auto" }}
                     size="xs"
+                    value="b"
                   >
                     {props.questionOptions.optionB}
                   </Radio>
 
                   <Radio
-                    value={props.questionOptions.optionC}
+                    
                     color="primary"
                     style={{ margin: "auto" }}
                     size="xs"
+                    value="c"
                   >
                     {props.questionOptions.optionC}
                   </Radio>
                   <Radio
-                    value={props.questionOptions.optionD}
+                   
                     color="primary"
                     style={{ margin: "auto" }}
                     size="xs"
+                    value="d"
                   >
                     {props.questionOptions.optionD}
                   </Radio>
